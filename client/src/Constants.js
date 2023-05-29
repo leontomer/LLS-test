@@ -1,3 +1,4 @@
-export const courseNameText = "course name";
-export const courseStatusText = "course status";
-export const demoCourseText = "demo course";
+export const courseNameText = "Course name";
+export const courseStatusText = "Course status";
+export const courseTutorText = "Course tutor";
+export const courseDescriptionText = "Course description";

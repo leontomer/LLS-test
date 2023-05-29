@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "@mui/material/Card";
-import { demoCourseText } from "../../Constants";
+import { CoursesContext } from "../../contexts/coursesContext";
+import {
+  courseNameText,
+  courseTutorText,
+  courseDescriptionText,
+} from "../../Constants";
+
 export default function CourseDetails() {
+  const { selectedCourse } = useContext(CoursesContext);
   return (
     <div>
       <Card
@@ -11,7 +18,15 @@ export default function CourseDetails() {
           marginTop: "5%",
         }}
       >
-        {demoCourseText}
+        {courseNameText + ": " + selectedCourse.courseName}
+        <div>
+          {courseDescriptionText +
+            ": " +
+            selectedCourse.courseOverview.description}
+        </div>
+        <div>
+          {courseTutorText + ": " + selectedCourse.courseOverview.instructor}
+        </div>
       </Card>
     </div>
   );

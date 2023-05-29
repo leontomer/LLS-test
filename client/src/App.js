@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SideBar from "./components/sidebar/SideBar";
 import CourseSelection from "./components/courseselection/CourseSelection";
 import CourseDetails from "./components/coursedetails/CourseDetails";
-import { UsersContext } from "./UsersContextProvider";
+import { UsersContext } from "./contexts/usersContext";
 import TopBar from "./components/topbar/TopBar";
 
 function App() {

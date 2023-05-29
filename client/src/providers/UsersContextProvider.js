@@ -1,12 +1,10 @@
 import React, { createContext, useState } from "react";
 
-const UsersContext = createContext();
+import { UsersContext } from "../contexts/usersContext";
 
 const UsersContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState({});
   const [selectedUserId, setSelectedUserId] = useState(-1);
-  //   const [state2, setState2] = useState(initialState2);
 
   return (
     <UsersContext.Provider
@@ -22,4 +20,4 @@ const UsersContextProvider = ({ children }) => {
   );
 };
 
-export { UsersContext, UsersContextProvider };
+export { UsersContextProvider };

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { UsersContext } from "../../UsersContextProvider";
+import { UsersContext } from "../../contexts/usersContext";
 import { AppBar, Toolbar, MenuItem, Select } from "@mui/material";
 import { getUsers } from "../../api/GetUsers";
 

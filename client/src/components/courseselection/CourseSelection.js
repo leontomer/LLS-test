@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Card from "@mui/material/Card";
 import { getCourses } from "../../api/GetCourses";
 import { useNavigate } from "react-router-dom";
 import { courseNameText, courseStatusText } from "../../Constants";
+import { CoursesContext } from "../../contexts/coursesContext";
 export default function CourseSelection(props) {
-  const [courses, setCourses] = useState([]);
+  const { courses, setCourses, setSelectedCourse } = useContext(CoursesContext);
   const navigate = useNavigate();
   useEffect(() => {
     (async () => {
@@ -13,9 +14,13 @@ export default function CourseSelection(props) {
     })();
   }, [props.selectedUserId]);
 
+  const handleSelectCourse = (course) => {
+    setSelectedCourse(course);
+    navigate("/coursedetails");
+  };
+
   return (
     <div>
-      Course Selection Page
       {courses?.map?.((course) => (
         <Card
           sx={{
@@ -24,7 +29,7 @@ export default function CourseSelection(props) {
             marginTop: "5%",
             cursor: "pointer",
           }}
-          onClick={() => navigate("/coursedetails")}
+          onClick={() => handleSelectCourse(course)}
         >
           {courseNameText}: {course.courseName}
           <div>
