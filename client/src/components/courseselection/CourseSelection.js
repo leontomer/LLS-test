@@ -8,10 +8,10 @@ export default function CourseSelection(props) {
   const navigate = useNavigate();
   useEffect(() => {
     (async () => {
-      const courses = await getCourses(props.userName);
+      const courses = await getCourses(props.selectedUserId);
       setCourses(courses);
     })();
-  }, [props.userName]);
+  }, [props.selectedUserId]);
 
   return (
     <div>

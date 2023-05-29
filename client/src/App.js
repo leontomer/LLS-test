@@ -1,44 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SideBar from "./components/sidebar/SideBar";
 import CourseSelection from "./components/courseselection/CourseSelection";
-import { AppBar, Toolbar, MenuItem, Select } from "@mui/material";
-import { getUsers } from "../src/api/GetUsers";
 import CourseDetails from "./components/coursedetails/CourseDetails";
+import { UsersContext } from "./UsersContextProvider";
+import TopBar from "./components/topbar/TopBar";
 
 function App() {
-  const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState("");
-  useEffect(() => {
-    (async () => {
-      const users = await getUsers();
-      setUsers(users);
-    })();
-  }, []);
-
-  const handleUserChange = (e) => {
-    setSelectedUser(e.target.value);
-  };
-
+  const { selectedUserId } = useContext(UsersContext);
   return (
     <div>
+      <TopBar />
       <Router>
-        <div>
-          <AppBar position="fixed">
-            <Toolbar>
-              <div className="select-user">
-                <Select value={selectedUser} onChange={handleUserChange}>
-                  {users?.map?.((user) => (
-                    <MenuItem key={user.userId} value={user.userName}>
-                      {user.userName}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </div>
-            </Toolbar>
-          </AppBar>
-        </div>
         <div>
           <SideBar />
         </div>
@@ -46,7 +20,7 @@ function App() {
           <Route path="/" />
           <Route
             path="/courseselection"
-            element={<CourseSelection userName={selectedUser} />}
+            element={<CourseSelection selectedUserId={selectedUserId} />}
           />
           <Route path="/coursedetails" element={<CourseDetails />} />
         </Routes>
