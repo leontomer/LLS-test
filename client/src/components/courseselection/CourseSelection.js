@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Card from "@mui/material/Card";
 import { getCourses } from "../../api/GetCourses";
 import { useNavigate } from "react-router-dom";
@@ -24,10 +24,11 @@ export default function CourseSelection(props) {
       {courses?.map?.((course) => (
         <Card
           sx={{
-            padding: "5px",
+            padding: "10px",
             marginLeft: "30%",
-            marginTop: "5%",
+            marginTop: "6%",
             cursor: "pointer",
+            maxWidth: "300px",
           }}
           onClick={() => handleSelectCourse(course)}
         >
