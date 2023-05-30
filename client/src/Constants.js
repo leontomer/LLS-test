@@ -5,3 +5,6 @@ export const courseDescriptionText = "Course description";
 export const appTitle = "User Progress Tracking Application";
 export const sideBarTextCourseSelection = "Course selection";
 export const showCourseProgressText = "Show course progress";
+export const completedStatus = "completed";
+export const availableStatus = "available";
+export const inProgressStatus = "in progress";

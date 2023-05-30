@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { UsersContext } from "../../contexts/usersContext";
+import { CoursesContext } from "../../contexts/coursesContext";
 import {
   AppBar,
   Toolbar,
@@ -17,7 +18,7 @@ export default function TopBar() {
   const navigate = useNavigate();
   const { users, setUsers, selectedUserId, setSelectedUserId } =
     useContext(UsersContext);
-
+  const { setCourses } = useContext(CoursesContext);
   useEffect(() => {
     (async () => {
       const users = await getUsers();
@@ -27,6 +28,7 @@ export default function TopBar() {
 
   const handleUserChange = (e) => {
     setSelectedUserId(e.target.value);
+    setCourses([]);
     navigate("/");
   };
 
