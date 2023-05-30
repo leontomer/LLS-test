@@ -15,7 +15,8 @@ export default function CourseDetails() {
         sx={{
           padding: "5px",
           marginLeft: "30%",
-          marginTop: "5%",
+          marginTop: "20%",
+          maxWidth: "470px",
         }}
       >
         {courseNameText + ": " + selectedCourse.courseName}

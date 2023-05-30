@@ -151,8 +151,11 @@ exports.users = [
         courseId: 2,
         courseName: "Computer science intro",
         status: "in progress",
-        courseOverview:
-          "Computer science intro course, very important course! mandatory for every software engineer",
+        courseOverview: {
+          description:
+            "Computer science intro course, very important course! mandatory for every software engineer",
+          instructor: "Dr. Karim abed",
+        },
       },
       {
         courseId: 3,
