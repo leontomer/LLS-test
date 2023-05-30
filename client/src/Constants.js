@@ -4,3 +4,4 @@ export const courseTutorText = "Course tutor";
 export const courseDescriptionText = "Course description";
 export const appTitle = "User Progress Tracking Application";
 export const sideBarTextCourseSelection = "Course selection";
+export const showCourseProgressText = "Show course progress";

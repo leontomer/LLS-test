@@ -27,6 +27,7 @@ export default function TopBar() {
 
   const handleUserChange = (e) => {
     setSelectedUserId(e.target.value);
+    navigate("/");
   };
 
   return (
