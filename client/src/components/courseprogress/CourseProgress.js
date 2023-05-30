@@ -11,11 +11,6 @@ export default function CourseProgress() {
   const handleChangeLessonStatus = (index) => {
     selectedCourse.lessons[index] = !selectedCourse.lessons[index];
     setSelectedCourse(selectedCourse);
-    for (let i = 0; i < courses.length; i++) {
-      if (courses[i] === selectedCourse.courseId) {
-        courses[i] = selectedCourse;
-      }
-    }
     setCourses([...courses]);
   };
   return (
