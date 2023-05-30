@@ -14,7 +14,7 @@ export default function CourseSelection(props) {
   const { courses, setCourses, setSelectedCourse } = useContext(CoursesContext);
   const navigate = useNavigate();
   useEffect(() => {
-    if (!courses) {
+    if (courses.length === 0) {
       (async () => {
         const courses = await getCourses(props.selectedUserId);
         setCourses(courses);

@@ -11,6 +11,7 @@ exports.users = [
           description: "welcome to math course",
           instructor: "Dr. Yehudit Bat Sheva",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 1,
@@ -20,6 +21,7 @@ exports.users = [
           description: "welcome to Physics course",
           instructor: "Dr. Some Example",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 3,
@@ -29,6 +31,7 @@ exports.users = [
           description: "welcome to Computer science intro course",
           instructor: "Dr. Some Example",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 4,
@@ -38,6 +41,7 @@ exports.users = [
           description: "welcome to Data Structures course",
           instructor: "Mr. Some one",
         },
+        lessons: [true, false, false, false, false],
       },
     ],
   },
@@ -53,6 +57,7 @@ exports.users = [
           description: "welcome to Psychology course",
           instructor: "Mr. Some one",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 1,
@@ -62,6 +67,7 @@ exports.users = [
           description: "welcome to Algebra course",
           instructor: "Mr. Tomer Levi",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 2,
@@ -71,6 +77,7 @@ exports.users = [
           description: "welcome to Computer science adv course",
           instructor: "Dr. Karin Levi",
         },
+        lessons: [true, false, false, false, false],
       },
       {
         courseId: 3,
@@ -80,6 +87,7 @@ exports.users = [
           description: "welcome to Tennis course",
           instructor: "Mr. Nadal",
         },
+        lessons: [false, false, false, false, false],
       },
     ],
   },
@@ -95,6 +103,7 @@ exports.users = [
           description: "welcome to Math 2 course",
           instructor: "Dr. Karin Levi",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 1,
@@ -104,6 +113,7 @@ exports.users = [
           description: "welcome to Physics 2 course",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 2,
@@ -113,6 +123,7 @@ exports.users = [
           description: "welcome to Computer science intro course",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 3,
@@ -122,6 +133,7 @@ exports.users = [
           description: "welcome to Data Structures 2 course",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
     ],
   },
@@ -137,6 +149,7 @@ exports.users = [
           description: "Math 3 course, very important course!",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 1,
@@ -146,6 +159,7 @@ exports.users = [
           description: "Physics 3 course, very important course!",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 2,
@@ -156,6 +170,7 @@ exports.users = [
             "Computer science intro course, very important course! mandatory for every software engineer",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
       {
         courseId: 3,
@@ -166,6 +181,7 @@ exports.users = [
             "Algo course, very important course! mandatory for every software engineer",
           instructor: "Dr. Karim abed",
         },
+        lessons: [false, false, false, false, false],
       },
     ],
   },
